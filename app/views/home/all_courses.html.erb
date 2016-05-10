@@ -44,6 +44,18 @@
 			                  <p><i style="color:#010101;" class="fa fa-hand-o-right" aria-hidden="true"></i>&nbsp;&nbsp;<%=h%></p>
 			                <%end%>
 			    			</div><!-- course benifits end -->
+			    			<hr>
+			    			<h3>Overview</h3>
+						    <div class="cboxBody"><!-- overview start -->
+				                
+				                <%ohall=course.overview.split("*")%>
+				                <%ohall.each do |hh|%>
+				                  <%h=hh.split("!")%>
+				                      <%h.each do |k|%>
+				                      <p>&nbsp;&nbsp;<i style="color:#010101;font-size:8px;" class="fa fa-circle" aria-hidden="true"></i><%=k%></p>
+				                      <%end%>
+				                <%end%>
+				    		</div><!-- overview end -->
 						  </div><!-- first menu end -->
 						  <div id="menu<%=mct-3%>" class="tab-pane fade"><!-- menu 2 start -->
 						    <h3>Highlights</h3><!-- highlights start -->
@@ -70,18 +82,7 @@
 						      </div>
 						  </div><!-- menu 2 end -->
 						  <div id="menu<%=mct-2%>" class="tab-pane fade"><!-- menu 3 start -->
-						    <h3>Overview</h3>
-						    <div class="cboxBody"><!-- overview start -->
-				                
-				                <%ohall=course.overview.split("*")%>
-				                <%ohall.each do |hh|%>
-				                  <%h=hh.split("!")%>
-				                      <%h.each do |k|%>
-				                      <p>&nbsp;&nbsp;<i style="color:#010101;font-size:8px;" class="fa fa-circle" aria-hidden="true"></i><%=k%></p>
-				                      <%end%>
-				                <%end%>
-				    		</div><!-- overview end -->
-				    		<hr>
+						    
 				    		<h3>Curriculum</h3>
 				    		<div class="cboxBody"><!-- overview start -->curriculum
 				                
