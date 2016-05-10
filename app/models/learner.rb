@@ -1,4 +1,5 @@
 class Learner < ActiveRecord::Base
+
 	validates :email, 
 	uniqueness: true, 
 	presence: true,
@@ -10,6 +11,15 @@ class Learner < ActiveRecord::Base
 	uniqueness: true, 
 	format: {with: /\A(\+\d{1,2}\s)?\(?\d{3}\)?[\s.-]?\d{3}[\s.-]?\d{4}\z/, message: "please enter a valid mobile number"}, 
 	length: { is: 10 }
+
+	def self.search(search)
+	  if search
+	    
+	    where(course_id: "#{search}").all
+	  else
+	    all.order("created_at ASC")
+	  end
+	end
 
 	
 	

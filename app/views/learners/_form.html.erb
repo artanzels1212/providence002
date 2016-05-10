@@ -1,3 +1,4 @@
+<%if current_user.admin%>
 <%= form_for(@learner) do |f| %>
   <% if @learner.errors.any? %>
     <div id="error_explanation">
@@ -43,3 +44,6 @@
     <%= f.submit %>
   </div>
 <% end %>
+<%else%>
+<h3>Please ask admin user to edit Student Input</h3>
+<%end%>

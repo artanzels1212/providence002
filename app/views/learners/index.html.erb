@@ -1,10 +1,22 @@
+<div style="width:88%;margin:0 auto;padding:2%;padding-left:5%;">
 <p id="notice"><%= notice %></p>
 
-<h1>Listing Learners</h1>
+<%=form_tag learners_path, method: 'get' do%>
+  
+  <select type="text" name="search" id="search" value="<%=params[:search].to_s%>", class="form-control" style="width:70% !important;">
+    <%@courses.each do |k|%>
+      <option value="<%=k.id%>"><%=k.name%></option>
+    <%end%>
+  </select>
+  <%=submit_tag ('Search'),name: nil,class: "btn btn-danger"%>
+<%end%>
 
-<table>
+<h1>Listing Enrollments</h1>
+<div class="well">
+<div class="table-responsive">
+<table class="table table-striped">
   <thead>
-    <tr>
+    <tr class="warning">
       <th>Name</th>
       <th>Email</th>
       <th>Phone number</th>
@@ -22,7 +34,7 @@
         <td><%= learner.name %></td>
         <td><%= learner.email %></td>
         <td><%= learner.phone_number %></td>
-        <td><%= learner.course_id %></td>
+        <td><%= @courses.find(learner.course_id).name %></td>
         <td><%= learner.course_type %></td>
         <td><%= learner.educational_status %></td>
         <td><%= learner.company_name %></td>
@@ -33,7 +45,11 @@
     <% end %>
   </tbody>
 </table>
-
+</div>
+</div>
 <br>
 
-<%= link_to 'New Learner', new_learner_path %>
+<%if current_user.admin%>
+  <%= link_to 'New Learner', new_learner_path %>
+<%end%>
+</div>

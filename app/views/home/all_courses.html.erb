@@ -88,9 +88,17 @@
 				                <%ccrs=course.curriculum.split("*")%>
 				                <%ccrs.each do |hh|%>
 				                  <%hh.split("!").each do |k|%>
-				                  		<p><%=k%></p>
+				                  		<%i=1%>
+				                  		<%k.split("#").each do |kk|%>
+				                  			<%if i==1%>
+				                  			<p><strong><%=kk%></strong></p>
+				                  			<%else%>
+				                  				<p>&#8594;<%=kk%></p>
+				                  			<%end%>
+				                  			<%i=0%>
+				                  		<%end%>
 				                  <%end%>
-				                  <br><br>
+				                 
 				                <%end%>
 				    		</div><!-- overview end -->
 						  </div><!-- menu 3 end -->

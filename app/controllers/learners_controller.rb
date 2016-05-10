@@ -5,7 +5,8 @@ class LearnersController < ApplicationController
   # GET /learners
   # GET /learners.json
   def index
-    @learners = Learner.all
+    @courses = Course.all
+    @learners = Learner.search(params[:search])
   end
 
   # GET /learners/1
@@ -70,6 +71,7 @@ class LearnersController < ApplicationController
 
     # Never trust parameters from the scary internet, only allow the white list through.
     def learner_params
-      params.require(:learner).permit(:name, :email, :phone_number, :course_id, :course_type, :educational_status, :company_name)
+      params.require(:learner).permit(:name, :email, :phone_number, :course_id, :course_type, :educational_status, :company_name,:search)
     end
+    
 end
