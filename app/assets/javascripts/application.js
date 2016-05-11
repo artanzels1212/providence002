@@ -17,7 +17,6 @@
 //= require chosen-jquery
 //= require owl.carousel
 //= require bootstrap-material-design
-//= require masonry.pkgd
 //= require turbolinks
 //= require_tree .
 

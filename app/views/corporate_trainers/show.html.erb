@@ -17,8 +17,18 @@
 </p>
 
 <p>
-  <strong>Extra:</strong>
-  <%= @corporate_trainer.extra %>
+  <strong>Trainer's Brief:</strong>
+  <% @corporate_trainer.extra.split("*").each do |k| %>
+  	<p><%=k%></p>
+  <%end%>
+</p>
+<p>
+  <strong>Twitter Link:</strong>
+  <%= @corporate_trainer.twitter %>
+</p>
+<p>
+  <strong>Linkedin Link:</strong>
+  <%= @corporate_trainer.linkedin %>
 </p>
 
 <%= link_to 'Edit', edit_corporate_trainer_path(@corporate_trainer) %> |

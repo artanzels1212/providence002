@@ -37,4 +37,8 @@ class HomeController < ApplicationController
     @learner = Learner.new
   end
 
+  def all_trainers
+    @corporate_trainers = CorporateTrainer.all
+  end
+
 end

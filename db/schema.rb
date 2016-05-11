@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20160510034454) do
+ActiveRecord::Schema.define(version: 20160511104225) do
 
   create_table "about_pages", force: :cascade do |t|
     t.string   "img_file_name"
@@ -115,6 +115,8 @@ ActiveRecord::Schema.define(version: 20160510034454) do
     t.string   "extra",            limit: 249
     t.datetime "created_at",                   null: false
     t.datetime "updated_at",                   null: false
+    t.string   "twitter"
+    t.string   "linkedin"
   end
 
   create_table "corporate_trainers_courses", id: false, force: :cascade do |t|

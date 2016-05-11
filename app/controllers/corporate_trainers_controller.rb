@@ -71,6 +71,6 @@ class CorporateTrainersController < ApplicationController
 
     # Never trust parameters from the scary internet, only allow the white list through.
     def corporate_trainer_params
-      params.require(:corporate_trainer).permit(:img, :name, :designation, :extra)
+      params.require(:corporate_trainer).permit(:img, :name, :designation, :extra,:twitter,:linkedin)
     end
 end

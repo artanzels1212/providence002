@@ -33,6 +33,7 @@ Rails.application.routes.draw do
   get '/admin', to: 'dash#index', as: 'admin'
  
   get '/all_courses', to: 'home#all_courses', as: 'all_courses'
+  get '/all_trainers', to: 'home#all_trainers', as: 'all_trainers'
   devise_for :users, :controllers => { :registrations => "registrations" } 
   resources :about_pages
   
