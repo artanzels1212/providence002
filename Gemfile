@@ -12,7 +12,7 @@ group :production do
 end
 gem 'aws-sdk', '< 2.0'
 gem 'devise'
-gem "paperclip", "~> 5.0.0.beta1"
+gem "paperclip",'4.3.6'
 gem 'bootstrap-sass', '~> 3.3.6'
 gem 'bootstrap-material-design'
 gem 'nested_scaffold'
