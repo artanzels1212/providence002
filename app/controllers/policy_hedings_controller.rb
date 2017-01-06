@@ -73,3 +73,9 @@ class PolicyHedingsController < ApplicationController
       params.require(:policy_heding).permit(:heading, :position)
     end
 end
+#    <td><%= link_to 'Show', child %></td>
+#    <td><%= link_to 'Edit', edit_child_path(child) %></td>
+#    <td><%= link_to 'Destroy', child, confirm: 'Are you sure?', method: :delete %></td>
+#    <td><%= link_to 'Show', parent_child_path(@parent, child) %></td>
+#    <td><%= link_to 'Edit', edit_parent_child_path(@parent, child) %></td>
+#    <td><%= link_to 'Destroy', [@parent, child], confirm: 'Are you sure?', metho
